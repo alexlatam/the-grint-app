@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Controllers\API\V1\Advertisement\CancelAdvertisementController;
 use App\Http\Controllers\API\V1\Advertisement\StoreAdvertisementController;
 use App\Http\Controllers\API\V1\Auth\AuthLoginController;
 use App\Http\Controllers\API\V1\Auth\AuthRegisterController;
@@ -28,6 +29,10 @@ class RepositoryProvider extends ServiceProvider
             ->give(UserEloquentRepository::class);
 
         $this->app->when(StoreAdvertisementController::class)
+            ->needs(AdvertisementRepositoryInterface::class)
+            ->give(AdvertisementRepository::class);
+
+        $this->app->when(CancelAdvertisementController::class)
             ->needs(AdvertisementRepositoryInterface::class)
             ->give(AdvertisementRepository::class);
 

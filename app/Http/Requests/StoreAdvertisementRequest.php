@@ -15,9 +15,11 @@ final class StoreAdvertisementRequest extends FormRequest
     {
         return [
             'title' => 'required|string|alpha:ascii|max:45',
-            'description' => 'required|string|max:255',
+            'description' => 'sometimes|string|max:255',
             'price' => 'required|numeric',
             'category_id' => 'required|exists:categories,id',
+            'status' => 'required|string|in:new,used,restored,as_new',
+            'final_date' => 'required|date|after:today',
         ];
     }
 }

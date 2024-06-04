@@ -7,6 +7,7 @@ use App\Http\Requests\StoreAdvertisementRequest;
 use App\Repositories\Contracts\AdvertisementRepositoryInterface;
 use App\Repositories\Contracts\UserRepositoryInterface;
 use Illuminate\Http\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 
 final class StoreAdvertisementController extends Controller
 {
@@ -22,6 +23,6 @@ final class StoreAdvertisementController extends Controller
 
         return response()->json([
             'message' => 'Advertisement created successfully',
-        ], 201);
+        ], Response::HTTP_CREATED);
     }
 }

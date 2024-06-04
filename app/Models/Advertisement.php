@@ -17,6 +17,8 @@ final class Advertisement extends Model
         'description',
         'price',
         'status',
+        'final_date',
+        'deleted_at',
     ];
 
     public function user(): BelongsTo

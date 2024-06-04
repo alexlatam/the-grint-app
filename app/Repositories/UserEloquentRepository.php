@@ -21,4 +21,9 @@ final class UserEloquentRepository implements UserRepositoryInterface
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function getAuthUserId(): int
+    {
+        return auth()->id();
+    }
 }

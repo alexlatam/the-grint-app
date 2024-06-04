@@ -1,13 +1,12 @@
 <?php
 
-use App\Http\Controllers\API\V1\AuthLoginController;
-use App\Http\Controllers\API\V1\AuthRegisterController;
+use App\Http\Controllers\API\V1\Advertisement\StoreAdvertisementController;
+use App\Http\Controllers\API\V1\Auth\AuthLoginController;
+use App\Http\Controllers\API\V1\Auth\AuthRegisterController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/register', AuthRegisterController::class);
 Route::post('/login', AuthLoginController::class);
 
-Route::get('/advertisements', function() {
-    return "success";
-})->middleware('auth:sanctum');
+Route::post('/advertisements', StoreAdvertisementController::class)->middleware('auth:sanctum');
 

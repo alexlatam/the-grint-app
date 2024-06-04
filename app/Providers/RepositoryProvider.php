@@ -2,8 +2,11 @@
 
 namespace App\Providers;
 
-use App\Http\Controllers\API\V1\AuthLoginController;
-use App\Http\Controllers\API\V1\AuthRegisterController;
+use App\Http\Controllers\API\V1\Advertisement\StoreAdvertisementController;
+use App\Http\Controllers\API\V1\Auth\AuthLoginController;
+use App\Http\Controllers\API\V1\Auth\AuthRegisterController;
+use App\Repositories\AdvertisementRepository;
+use App\Repositories\Contracts\AdvertisementRepositoryInterface;
 use App\Repositories\Contracts\UserRepositoryInterface;
 use App\Repositories\UserEloquentRepository;
 use Illuminate\Support\ServiceProvider;
@@ -19,6 +22,14 @@ class RepositoryProvider extends ServiceProvider
         $this->app->when(AuthRegisterController::class)
             ->needs(UserRepositoryInterface::class)
             ->give(UserEloquentRepository::class);
+
+        $this->app->when(StoreAdvertisementController::class)
+            ->needs(UserRepositoryInterface::class)
+            ->give(UserEloquentRepository::class);
+
+        $this->app->when(StoreAdvertisementController::class)
+            ->needs(AdvertisementRepositoryInterface::class)
+            ->give(AdvertisementRepository::class);
 
     }
 

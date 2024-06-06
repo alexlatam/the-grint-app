@@ -4,7 +4,7 @@ This test contains the solution for the technical test for TheGrint App.
 The technical test is in the following path: `technical-test-thegrint-app.pdf`
 
 ## Installation
-1. Clone the repository
+1. Clone the repository `git clone https://github.com/alexlatam/the-grint-app.git`
 2. Run `composer install`
 3. Run server `./vendor/bin/sail up -d`
 4. Run `./vendor/bin/sail artisan migrate --seed`

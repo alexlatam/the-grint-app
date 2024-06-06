@@ -1,0 +1,697 @@
+{
+	"info": {
+		"_postman_id": "db2de7da-ed3d-4591-a524-6e6060d796b6",
+		"name": "The Grint - Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12864357"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"luis\",\n    \"lastname\": \"jhon\",\n    \"email\": \"luis@mail.com\",\n    \"password\": \"luis1234*\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"luis\",\n    \"lastname\": \"jhon\",\n    \"email\": \"luis@mail.com\",\n    \"password\": \"luis1234*\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8080"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 16:10:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User created successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"alexis@mail.com\",\n    \"password\": \"alexis1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/api/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 Ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"alexis@mail.com\",\n    \"password\": \"alexis1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8081/api/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8081"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 15:43:30 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"name\": \"Alexis Montilla\",\n        \"lastname\": null\n    },\n    \"access_token\": \"1|a4fhZIyicIrDhM16fb06K4RQiKhnDN4xJTuyiSER9d644975\",\n    \"token_type\": \"Bearer\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Advertisements",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|MiecSn4xb7de0yJZih7FoflAB6Ba29QttLu3yWIja311c220",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"randoms\",\n    \"description\": \"this a description\",\n    \"price\": 101.95,\n    \"category_id\": 1,\n    \"status\": \"restored\",\n    \"final_date\": \"2024-07-10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/advertisements",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"advertisements"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "401 Unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"randoms\",\n    \"description\": \"this a description\",\n    \"price\": 101.95,\n    \"category_id\": 1,\n    \"status\": \"restored\",\n    \"final_date\": \"2024-07-10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/advertisements",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"advertisements"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8080"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 16:10:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+				},
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"randoms\",\n    \"description\": \"this a description\",\n    \"price\": 101.95,\n    \"category_id\": 1,\n    \"status\": \"restored\",\n    \"final_date\": \"2024-07-10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/advertisements",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"advertisements"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8080"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 16:11:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Advertisement created successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Cancel Advertisements",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|a4fhZIyicIrDhM16fb06K4RQiKhnDN4xJTuyiSER9d644975",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/api/advertisements/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"advertisements",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "401 Unauthorized",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/api/advertisements/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"advertisements",
+								"5"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8081"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 15:43:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+				},
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/api/advertisements/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"advertisements",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8081"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 15:43:48 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Advertisement canceled successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Advertisements",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/api/advertisements?show_all=1&status=new&keyword=et&category_id=2&min_price=10&max_price=500",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"advertisements"
+					],
+					"query": [
+						{
+							"key": "show_all",
+							"value": "1"
+						},
+						{
+							"key": "status",
+							"value": "new"
+						},
+						{
+							"key": "keyword",
+							"value": "et"
+						},
+						{
+							"key": "category_id",
+							"value": "2"
+						},
+						{
+							"key": "min_price",
+							"value": "10"
+						},
+						{
+							"key": "max_price",
+							"value": "500"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/api/advertisements?show_all=1&status=new&keyword=et&category_id=2&min_price=10&max_price=500",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"advertisements"
+							],
+							"query": [
+								{
+									"key": "show_all",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "new"
+								},
+								{
+									"key": "keyword",
+									"value": "et"
+								},
+								{
+									"key": "category_id",
+									"value": "2"
+								},
+								{
+									"key": "min_price",
+									"value": "10"
+								},
+								{
+									"key": "max_price",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8081"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.3.7"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jun 2024 15:25:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 126,\n            \"title\": \"Corporis cumque sed accusantium consequatur praesentium quia.\",\n            \"description\": \"Ipsum earum odio officia. Debitis sunt consequatur eligendi. Inventore enim sint aspernatur non fugit. Est aliquid iusto dolorum excepturi et.\",\n            \"price\": \"493.88\",\n            \"status\": \"new\",\n            \"final_date\": \"2024-06-16 19:42:39\",\n            \"created_at\": \"2024-06-06T15:09:47.000000Z\",\n            \"user\": {\n                \"name\": \"Alexis Montilla\",\n                \"lastname\": null\n            },\n            \"category\": {\n                \"name\": \"sports\"\n            }\n        },\n        {\n            \"id\": 60,\n            \"title\": \"Provident sit est occaecati modi temporibus ut.\",\n            \"description\": \"Est ut consequatur et. Velit nemo tenetur et neque. Minima ipsa rerum suscipit quia atque non qui.\",\n            \"price\": \"441.12\",\n            \"status\": \"new\",\n            \"final_date\": \"2024-06-10 02:31:27\",\n            \"created_at\": \"2024-06-06T15:09:46.000000Z\",\n            \"user\": {\n                \"name\": \"Alexis Montilla\",\n                \"lastname\": null\n            },\n            \"category\": {\n                \"name\": \"sports\"\n            }\n        },\n        {\n            \"id\": 216,\n            \"title\": \"Et ex laboriosam doloribus cum ut.\",\n            \"description\": \"Et voluptatem rerum mollitia adipisci quis impedit. Natus eaque quod vel praesentium rem numquam esse. Voluptates et similique dolorum quia dolorum.\",\n            \"price\": \"413.64\",\n            \"status\": \"new\",\n            \"final_date\": \"2024-06-10 06:24:28\",\n            \"created_at\": \"2024-06-06T15:09:47.000000Z\",\n            \"user\": {\n                \"name\": \"Alexis Montilla\",\n                \"lastname\": null\n            },\n            \"category\": {\n                \"name\": \"sports\"\n            }\n        },\n        {\n            \"id\": 160,\n            \"title\": \"Asperiores ipsum porro esse et.\",\n            \"description\": \"Qui sunt et optio dolore. Ut assumenda aliquam quasi facilis inventore totam. Labore cumque officia quae est quo error officia blanditiis. Qui voluptatem sed ipsam provident ratione ut odio.\",\n            \"price\": \"311.71\",\n            \"status\": \"new\",\n            \"final_date\": \"2024-06-07 01:35:07\",\n            \"created_at\": \"2024-06-06T15:09:47.000000Z\",\n            \"user\": {\n                \"name\": \"Alexis Montilla\",\n                \"lastname\": null\n            },\n            \"category\": {\n                \"name\": \"sports\"\n            }\n        },\n        {\n            \"id\": 154,\n            \"title\": \"Accusantium omnis occaecati et repellat assumenda ex similique delectus.\",\n            \"description\": \"Pariatur vero consequatur laboriosam illo. Eligendi corrupti facilis consequatur aperiam sit magnam reiciendis adipisci. Aliquam aut eum quod eius.\",\n            \"price\": \"181.83\",\n            \"status\": \"new\",\n            \"final_date\": \"2024-06-06 18:30:06\",\n            \"created_at\": \"2024-06-06T15:09:47.000000Z\",\n            \"user\": {\n                \"name\": \"Alexis Montilla\",\n                \"lastname\": null\n            },\n            \"category\": {\n                \"name\": \"sports\"\n            }\n        },\n        {\n            \"id\": 145,\n            \"title\": \"Fugiat labore vitae impedit aut.\",\n            \"description\": \"Quos aperiam sunt et esse accusantium. Commodi temporibus iste impedit fugit molestiae est et. Ea minima suscipit et occaecati delectus.\",\n            \"price\": \"109.69\",\n            \"status\": \"new\",\n            \"final_date\": \"2024-06-14 11:57:18\",\n            \"created_at\": \"2024-06-06T15:09:47.000000Z\",\n            \"user\": {\n                \"name\": \"Alexis Montilla\",\n                \"lastname\": null\n            },\n            \"category\": {\n                \"name\": \"sports\"\n            }\n        },\n        {\n            \"id\": 97,\n            \"title\": \"Cumque tempora expedita et delectus vero.\",\n            \"description\": \"Rerum ut ad voluptas voluptatem ea laudantium a. Ab aliquid consequatur est perferendis facere quia. Aut mollitia numquam delectus voluptas voluptatum. Nihil voluptates consequuntur id ut officia.\",\n            \"price\": \"73.27\",\n            \"status\": \"new\",\n            \"final_date\": \"2024-06-06 15:09:46\",\n            \"created_at\": \"2024-06-06T15:09:47.000000Z\",\n            \"user\": {\n                \"name\": \"Alexis Montilla\",\n                \"lastname\": null\n            },\n            \"category\": {\n                \"name\": \"sports\"\n            }\n        },\n        {\n            \"id\": 73,\n            \"title\": \"Impedit laborum ea libero consequatur ut doloremque.\",\n            \"description\": \"Architecto saepe sed atque. Omnis soluta vel et sunt ex. Voluptas quia accusantium animi rerum dignissimos iure. Quo sed eligendi dolorem eum.\",\n            \"price\": \"2.12\",\n            \"status\": \"new\",\n            \"final_date\": \"2024-06-06 15:09:46\",\n            \"created_at\": \"2024-06-06T15:09:47.000000Z\",\n            \"user\": {\n                \"name\": \"Alexis Montilla\",\n                \"lastname\": null\n            },\n            \"category\": {\n                \"name\": \"sports\"\n            }\n        }\n    ],\n    \"links\": {\n        \"total\": 8,\n        \"currentPage\": 1,\n        \"lastPage\": 1,\n        \"perPage\": 15,\n        \"path\": \"http://localhost:8081/api/advertisements\"\n    }\n}"
+				}
+			]
+		}
+	]
+}

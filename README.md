@@ -6,11 +6,12 @@ The technical test is in the following path: `technical-test-thegrint-app.pdf`
 ## Installation
 1. Clone the repository `git clone https://github.com/alexlatam/the-grint-app.git`
 2. Run `composer install`
-3. Run server `./vendor/bin/sail up -d`
-4. Run `./vendor/bin/sail artisan migrate --seed`
-5. Execute the tests `./vendor/bin/sail test`
-6. Execute the tests with coverage `./vendor/bin/sail test --caverage`
-7. Access the application in the browser at `http://localhost:8080`
+3. Create a copy of the `.env.example` file and rename it to `.env` and set the database credentials
+4. Run server `./vendor/bin/sail up -d`
+5. Run `./vendor/bin/sail artisan migrate --seed`
+6. Execute the tests `./vendor/bin/sail test`
+7. Execute the tests with coverage `./vendor/bin/sail test --caverage`
+8. Access the application in the browser at `http://localhost:8080`
 
 ## API Endpoints
 - Login `POST /api/login`
@@ -20,7 +21,5 @@ The technical test is in the following path: `technical-test-thegrint-app.pdf`
 - Delete Advertisement `DELETE /api/advertisements/{advertisement}`
 
 ## Postman Collection
-
-The postman collection is in the following path: `TheGrint.postman_collection.json`
 The collection file is in the root of the project. `TheGrint-Api.postman_collection.json`
 

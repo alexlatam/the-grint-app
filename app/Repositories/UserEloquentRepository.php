@@ -12,7 +12,7 @@ final class UserEloquentRepository implements UserRepositoryInterface
         return User::where('email', $email)->first();
     }
 
-    public function create(array $data): void
+    public function store(array $data): void
     {
         User::create([
             'name' => $data['name'],

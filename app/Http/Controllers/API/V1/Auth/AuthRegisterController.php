@@ -14,7 +14,7 @@ final class AuthRegisterController extends Controller
 
     public function __invoke(AuthRegisterRequest $request): JsonResponse
     {
-        $this->userRepository->create($request->all());
+        $this->userRepository->store($request->all());
 
         return response()->json([
             'message' => 'User created successfully',

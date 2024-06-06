@@ -8,7 +8,7 @@ interface UserRepositoryInterface
 {
     public function getUserByEmail(string $email): ?User;
 
-    public function create(array $data): void;
+    public function store(array $data): void;
 
     public function getAuthUserId(): int;
 }

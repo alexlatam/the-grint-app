@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Enums\StatusEnum;
 use Illuminate\Foundation\Http\FormRequest;
 
 final class StoreAdvertisementRequest extends FormRequest
@@ -18,7 +19,8 @@ final class StoreAdvertisementRequest extends FormRequest
             'description' => 'sometimes|string|max:255',
             'price' => 'required|numeric',
             'category_id' => 'required|exists:categories,id',
-            'status' => 'required|string|in:new,used,restored,as_new',
+            'status' => 'required|string|in:'. StatusEnum::NEW->value.','.
+                StatusEnum::USED->value.','. StatusEnum::RESTORED->value. ',' . StatusEnum::AS_NEW->value,
             'final_date' => 'required|date|after:today',
         ];
     }

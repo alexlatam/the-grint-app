@@ -1,0 +1,325 @@
+App\Http\Resources\AdvertisementCollection {#1197 // app/Http/Controllers/API/V1/Advertisement/GetAllAdvertisementController.php:23
++resource:
+Illuminate\Pagination
+\
+LengthAwarePaginator {#1191
+#items:
+Illuminate\Support
+\
+Collection {#924
+#items: array:2 [
+0 =>
+App\Http\Resources
+\
+AdvertisementResource {#1190
++resource:
+App\Models
+\
+Advertisement {#1195
+#connection: "sqlite"
+#table: "advertisements"
+#primaryKey: "id"
+#keyType: "int"
++incrementing: true
+#with: []
+#withCount: []
++preventsLazyLoading: false
+#perPage: 15
++exists: true
++wasRecentlyCreated: false
+#escapeWhenCastingToString: false
+#attributes: array:11 [
+"id" => 2
+"user_id" => 1
+"category_id" => 1
+"title" => "random"
+"price" => 100.95
+"status" => "restored"
+"description" => "this a description"
+"final_date" => "2024-07-10"
+"deleted_at" => null
+"created_at" => "2024-06-04 21:49:07"
+"updated_at" => "2024-06-04 21:49:07"
+]
+#original: array:11 [
+"id" => 2
+"user_id" => 1
+"category_id" => 1
+"title" => "random"
+"price" => 100.95
+"status" => "restored"
+"description" => "this a description"
+"final_date" => "2024-07-10"
+"deleted_at" => null
+"created_at" => "2024-06-04 21:49:07"
+"updated_at" => "2024-06-04 21:49:07"
+]
+#changes: []
+#casts: []
+#classCastCache: []
+#attributeCastCache: []
+#dateFormat: null
+#appends: []
+#dispatchesEvents: []
+#observables: []
+#relations: array:2 [
+"user" =>
+App\Models
+\
+User {#1199
+#connection: "sqlite"
+#table: "users"
+#primaryKey: "id"
+#keyType: "int"
++incrementing: true
+#with: []
+#withCount: []
++preventsLazyLoading: false
+#perPage: 15
++exists: true
++wasRecentlyCreated: false
+#escapeWhenCastingToString: false
+#attributes: array:9 [
+"id" => 1
+"name" => "Alexis Montilla"
+"lastname" => null
+"email" => "alexis@mail.com"
+"email_verified_at" => "2024-06-04 21:42:18"
+"password" => "$2y$12$gs8Tq9MFYz7rQ.AtIi1Ya..2sxVxXuv/rf4VOxisc31rLf8Ye0Iwi"
+"remember_token" => "zaNAC6Bq5M"
+"created_at" => "2024-06-04 21:42:18"
+"updated_at" => "2024-06-04 21:42:18"
+]
+#original: array:9 [
+"id" => 1
+"name" => "Alexis Montilla"
+"lastname" => null
+"email" => "alexis@mail.com"
+"email_verified_at" => "2024-06-04 21:42:18"
+"password" => "$2y$12$gs8Tq9MFYz7rQ.AtIi1Ya..2sxVxXuv/rf4VOxisc31rLf8Ye0Iwi"
+"remember_token" => "zaNAC6Bq5M"
+"created_at" => "2024-06-04 21:42:18"
+"updated_at" => "2024-06-04 21:42:18"
+]
+#changes: []
+#casts: array:2 [
+"email_verified_at" => "datetime"
+"password" => "hashed"
+]
+#classCastCache: []
+#attributeCastCache: []
+#dateFormat: null
+#appends: []
+#dispatchesEvents: []
+#observables: []
+#relations: []
+#touches: []
++timestamps: true
++usesUniqueIds: false
+#hidden: array:2 [
+0 => "password"
+1 => "remember_token"
+]
+#visible: []
+#fillable: array:4 [
+0 => "name"
+1 => "lastname"
+2 => "email"
+3 => "password"
+]
+#guarded: array:1 [
+0 => "*"
+]
+#authPasswordName: "password"
+#rememberTokenName: "remember_token"
+#accessToken: null
+}
+"category" =>
+App\Models
+\
+Category {#1198
+#connection: "sqlite"
+#table: "categories"
+#primaryKey: "id"
+#keyType: "int"
++incrementing: true
+#with: []
+#withCount: []
++preventsLazyLoading: false
+#perPage: 15
++exists: true
++wasRecentlyCreated: false
+#escapeWhenCastingToString: false
+#attributes: array:4 [
+"id" => 1
+"title" => "technology"
+"created_at" => "2024-06-04 21:42:18"
+"updated_at" => "2024-06-04 21:42:18"
+]
+#original: array:4 [
+"id" => 1
+"title" => "technology"
+"created_at" => "2024-06-04 21:42:18"
+"updated_at" => "2024-06-04 21:42:18"
+]
+#changes: []
+#casts: []
+#classCastCache: []
+#attributeCastCache: []
+#dateFormat: null
+#appends: []
+#dispatchesEvents: []
+#observables: []
+#relations: []
+#touches: []
++timestamps: true
++usesUniqueIds: false
+#hidden: []
+#visible: []
+#fillable: array:1 [
+0 => "title"
+]
+#guarded: array:1 [
+0 => "*"
+]
+}
+]
+#touches: []
++timestamps: true
++usesUniqueIds: false
+#hidden: array:1 [
+0 => "deleted_at"
+]
+#visible: []
+#fillable: array:8 [
+0 => "user_id"
+1 => "category_id"
+2 => "title"
+3 => "description"
+4 => "price"
+5 => "status"
+6 => "final_date"
+7 => "deleted_at"
+]
+#guarded: array:1 [
+0 => "*"
+]
+}
++with: []
++additional: []
+}
+1 =>
+App\Http\Resources
+\
+AdvertisementResource {#1189
++resource:
+App\Models
+\
+Advertisement {#1194
+#connection: "sqlite"
+#table: "advertisements"
+#primaryKey: "id"
+#keyType: "int"
++incrementing: true
+#with: []
+#withCount: []
++preventsLazyLoading: false
+#perPage: 15
++exists: true
++wasRecentlyCreated: false
+#escapeWhenCastingToString: false
+#attributes: array:11 [
+"id" => 3
+"user_id" => 1
+"category_id" => 1
+"title" => "random"
+"price" => 100.95
+"status" => "restored"
+"description" => "this a description"
+"final_date" => "2024-07-10"
+"deleted_at" => null
+"created_at" => "2024-06-04 21:49:08"
+"updated_at" => "2024-06-04 21:49:08"
+]
+#original: array:11 [
+"id" => 3
+"user_id" => 1
+"category_id" => 1
+"title" => "random"
+"price" => 100.95
+"status" => "restored"
+"description" => "this a description"
+"final_date" => "2024-07-10"
+"deleted_at" => null
+"created_at" => "2024-06-04 21:49:08"
+"updated_at" => "2024-06-04 21:49:08"
+]
+#changes: []
+#casts: []
+#classCastCache: []
+#attributeCastCache: []
+#dateFormat: null
+#appends: []
+#dispatchesEvents: []
+#observables: []
+#relations: array:2 [
+"user" =>
+App\Models
+\
+User {#1199}
+"category" =>
+App\Models
+\
+Category {#1198}
+]
+#touches: []
++timestamps: true
++usesUniqueIds: false
+#hidden: array:1 [
+0 => "deleted_at"
+]
+#visible: []
+#fillable: array:8 [
+0 => "user_id"
+1 => "category_id"
+2 => "title"
+3 => "description"
+4 => "price"
+5 => "status"
+6 => "final_date"
+7 => "deleted_at"
+]
+#guarded: array:1 [
+0 => "*"
+]
+}
++with: []
++additional: []
+}
+]
+#escapeWhenCastingToString: false
+}
+#perPage: 2
+#currentPage: 1
+#path: "http://localhost:8000/api/advertisements"
+#query: []
+#fragment: null
+#pageName: "page"
++onEachSide: 3
+#options: array:2 [
+"path" => "http://localhost:8000/api/advertisements"
+"pageName" => "page"
+]
+#total: 5
+#lastPage: 3
+}
++with: []
++additional: []
++collects: null
++collection:
+Illuminate\Support
+\
+Collection {#924}
+#preserveAllQueryParameters: false
+#queryParameters: null
+}

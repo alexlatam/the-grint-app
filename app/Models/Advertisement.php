@@ -21,6 +21,10 @@ final class Advertisement extends Model
         'deleted_at',
     ];
 
+    protected $hidden = [
+        'deleted_at',
+    ];
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);

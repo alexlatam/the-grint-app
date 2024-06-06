@@ -43,9 +43,6 @@ class RepositoryProvider extends ServiceProvider
             ->give(AdvertisementRepository::class);
     }
 
-    /**
-     * Bootstrap services.
-     */
     public function boot(): void
     {
         //
